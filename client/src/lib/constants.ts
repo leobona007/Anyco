@@ -10,73 +10,107 @@ export const socialIcons = [
   { name: "Behance", icon: Award, url: "https://www.behance.net/" }
 ];
 
+// Import logo images
+import tailwindImg from "@/assets/images/tailwind.png";
+import reactImg from "@/assets/images/react.png";
+import pythonImg from "@/assets/images/python.png";
+import cssImg from "@/assets/images/CSS.png";
+import htmlImg from "@/assets/images/HTML.png";
+import nodejsImg from "@/assets/images/nodejs.png";
+import typescriptImg from "@/assets/images/typsricpt.png";
+import mysqlImg from "@/assets/images/mysql.png";
+import supabaseImg from "@/assets/images/supabase.png";
+import redisImg from "@/assets/images/redis.png";
+import googleAdsImg from "@/assets/images/googleads.png";
+import googleTagImg from "@/assets/images/googletag.png";
+import googleAnalyticsImg from "@/assets/images/googleanalytics.png";
+import facebookImg from "@/assets/images/facebook.png";
+import instagramImg from "@/assets/images/instagram.png";
+import chatgptImg from "@/assets/images/chatgpt.png";
+import deepseekImg from "@/assets/images/deepseek.png";
+import manusImg from "@/assets/images/manus.png";
+import grokImg from "@/assets/images/grok.png";
+
 // Client logos
 export const clientLogos = [
   { 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb52d0d1e8df928c8db_brand-logo-1.svg", 
+    src: tailwindImg, 
     alt: "tailwind" 
   },
   { 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-2.svg", 
+    src: reactImg, 
     alt: "react" 
   },
   { 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb51ea56f4be6cd54db_brand-logo-3.svg", 
+    src: pythonImg, 
     alt: "Python" 
   },
   { 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb5d075151215cbd753_brand-logo-4.svg", 
+    src: cssImg, 
     alt: "CSS" 
   },
   { 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb56da9562a4ee1c915_brand-logo-5.svg", 
+    src: htmlImg, 
     alt: "HTML" 
   },
   { 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb5acbdb865fe9d87b2_brand-logo-6.svg", 
+    src: nodejsImg, 
     alt: "Node JS" 
   },
   { 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+    src: typescriptImg, 
     alt: "Type Script" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+  },
+  { 
+    src: typescriptImg, 
     alt: "Java Script" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+  },
+  { 
+    src: mysqlImg, 
     alt: "MY SQL" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+  },
+  { 
+    src: supabaseImg, 
     alt: "SupaBase" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+  },
+  { 
+    src: redisImg, 
     alt: "Redis" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+  },
+  { 
+    src: googleAdsImg, 
     alt: "Google Ads" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+  },
+  { 
+    src: googleTagImg, 
     alt: "Google Tag Manager" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+  },
+  { 
+    src: googleAnalyticsImg, 
     alt: "Google Analytcs" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+  },
+  { 
+    src: facebookImg, 
     alt: "Facebook ADS" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+  },
+  { 
+    src: instagramImg, 
     alt: "Instagram ADS" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+  },
+  { 
+    src: chatgptImg, 
     alt: "Chat GPT" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+  },
+  { 
+    src: deepseekImg, 
     alt: "Deep Seek" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+  },
+  { 
+    src: manusImg, 
     alt: "Manus" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
+  },
+  { 
+    src: grokImg, 
     alt: "Grok" 
   }
 ];
