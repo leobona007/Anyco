@@ -62,10 +62,6 @@ export const clientLogos = [
     alt: "Type Script" 
   },
   { 
-    src: typescriptImg, 
-    alt: "Java Script" 
-  },
-  { 
     src: mysqlImg, 
     alt: "MY SQL" 
   },
