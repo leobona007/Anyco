@@ -17,7 +17,7 @@ const ClientLogos = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Trusted by 50+ top companies
+            Desenvolvimento Multi-Plataforma
           </h2>
         </motion.div>
         
