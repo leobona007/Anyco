@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
+import logoImage from "@/assets/images/logo.png";
 
 const Footer = () => {
   return (
@@ -10,16 +11,7 @@ const Footer = () => {
           <div>
             <Link href="/" className="flex items-center mb-6">
               <div className="text-white font-bold text-2xl flex items-center">
-                <span className="text-primary text-3xl mr-1">
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    viewBox="0 0 24 24" 
-                    className="w-7 h-7 transform rotate-45 fill-current"
-                  >
-                    <path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15L6.04 7.5 12 10.85 17.96 7.5 12 4.15z" />
-                  </svg>
-                </span>
-                <span>NetCraft</span>
+                <img src={logoImage} alt="Logo" className="h-10" />
               </div>
             </Link>
             <p className="text-gray-400 mb-6">
@@ -79,7 +71,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <span className="text-primary mr-3"><Mail size={18} /></span>
-                <a href="mailto:info@netcraft.com" className="text-gray-400 hover:text-primary transition">info@netcraft.com</a>
+                <a href="mailto:info@anyco.com" className="text-gray-400 hover:text-primary transition">info@anyco.com</a>
               </li>
             </ul>
           </div>
@@ -89,7 +81,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-center md:text-left mb-4 md:mb-0">
-              © {new Date().getFullYear()} NetCraft. All rights reserved.
+              © {new Date().getFullYear()} Anyco. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-500 hover:text-white transition">Privacy Policy</a>

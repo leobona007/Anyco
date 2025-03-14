@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Phone, Menu, ChevronDown, ChevronRight } from "lucide-react";
+import logoImage from "@/assets/images/logo.png";
 
 // Navigation data
 const navigationItems = [
@@ -85,16 +86,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link href="/">
               <div className="text-white font-bold text-2xl flex items-center">
-                <span className="text-primary text-3xl mr-1">
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    viewBox="0 0 24 24" 
-                    className="w-7 h-7 transform rotate-45 fill-current"
-                  >
-                    <path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15L6.04 7.5 12 10.85 17.96 7.5 12 4.15z" />
-                  </svg>
-                </span>
-                <span>NetCraft</span>
+                <img src={logoImage} alt="Logo" className="h-10" />
               </div>
             </Link>
           </div>
