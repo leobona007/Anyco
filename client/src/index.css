@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 19% 11%;
+    --foreground: 210 40% 98%;
+    
+    --card: 222 19% 11%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 22% 15%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 157 70% 40%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 222 22% 15%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 222 22% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+    
+    --accent: 222 22% 15%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 220 13% 25%;
+    --input: 220 13% 25%;
+    --ring: 224 76% 48%;
+    
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    @apply h-full overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary/80;
+  }
+  
+  .gradient-hero {
+    @apply bg-gradient-to-r from-primary to-[#09966E] bg-opacity-80;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-scale:hover {
+    @apply transform scale-105;
+  }
+  
+  .service-card {
+    @apply transition-all duration-300;
+  }
+  
+  .service-card:hover {
+    @apply transform -translate-y-2 shadow-lg;
+  }
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.client-logo-slider {
+  animation: slide 30s linear infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.tab-content-active {
+  animation: fadeIn 0.5s ease-in-out;
+}
