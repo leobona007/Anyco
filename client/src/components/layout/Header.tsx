@@ -18,9 +18,10 @@ const navigationItems = [
     href: "#", 
     dropdown: true,
     items: [
-      { name: "Desenvolvimento de Paginas", href: "/services/digital-marketing" },
-      { name: "Gerenciamento de Google ADS", href: "/services/seo" },
-      { name: "Gerenciamento do Instagram/Facebook ADS", href: "/services/content" },
+      { name: "Desenvolvimento de WebPages", href: "/services/digital-marketing" },
+      { name: "Desenvolvimento de WebAplications", href: "/services/seo" },
+      { name: "Gerenciamento de Google ADS", href: "/services/content" },
+      { name: "Gerenciamento do Instagram/Facebook ADS", href: "/services/content"}
     ]
   },
    { 
