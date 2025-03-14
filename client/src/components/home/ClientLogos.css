@@ -1,0 +1,23 @@
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.logos-slide {
+  display: flex;
+  width: fit-content;
+  animation: slide 30s linear infinite;
+}
+
+.logo-item {
+  flex-shrink: 0;
+}

@@ -1,11 +1,25 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { clientLogos } from "@/lib/constants";
 import tailwindImage from "@/assets/images/tailwind.png";
+import "./ClientLogos.css";
 
 const ClientLogos = () => {
   // Create two sets of logos for infinite loop effect
   const logos = [...clientLogos, ...clientLogos];
+  
+  // Calculate the total width needed for animation
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [animationDuration, setAnimationDuration] = useState(30); // Default duration in seconds
+  
+  useEffect(() => {
+    // Adjust animation speed based on the number of logos
+    if (containerRef.current) {
+      const containerWidth = containerRef.current.scrollWidth / 2; // Divide by 2 since we duplicated the logos
+      // Adjust speed based on width (more logos = slower animation)
+      setAnimationDuration(containerWidth / 30); // Adjusted divisor for better speed
+    }
+  }, []);
   
   return (
     <section className="py-16 bg-secondary overflow-hidden">
@@ -22,11 +36,22 @@ const ClientLogos = () => {
           </h2>
         </motion.div>
         
-        <div className="relative">
-          <div className="flex overflow-hidden">
-            <div className="flex space-x-12 items-center client-logo-slider">
+        <div className="relative logo-carousel-container">
+          <div className="overflow-hidden">
+            <div 
+              ref={containerRef}
+              className="logos-slide"
+              style={{ 
+                animationDuration: `${animationDuration}s`,
+                animationTimingFunction: "linear",
+                animationIterationCount: "infinite",
+                animationName: "slide",
+                display: "flex",
+                width: "fit-content"
+              }}
+            >
               {logos.map((logo, index) => (
-                <div key={`logo-${index}`} className="mx-8">
+                <div key={`logo-${index}`} className="mx-8 logo-item">
                   <img 
                     src={logo.src} 
                     alt={logo.alt} 
