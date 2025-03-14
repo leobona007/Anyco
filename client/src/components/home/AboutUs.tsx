@@ -54,7 +54,7 @@ const AboutUs = () => {
   
   return (
     <section className="py-20 bg-background">
-      <div className="container mx-auto max-w-7xl px-4">
+      <div id="about-us" className="container mx-auto max-w-7xl px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}

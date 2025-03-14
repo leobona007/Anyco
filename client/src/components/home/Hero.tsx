@@ -41,11 +41,11 @@ const Hero = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <a href="tel:+11234567890" className="flex items-center text-white hover:text-gray-200 transition">
+              <a href="tel:+51981310168" className="flex items-center text-white hover:text-gray-200 transition">
                 <span className="bg-white/20 rounded-full p-3 mr-3">
                   <Phone className="h-5 w-5 text-white" />
                 </span>
-                <span className="font-medium">+1 (123) 456 7890</span>
+                <span className="font-medium">+51981310168</span>
               </a>
             </motion.div>
             <motion.div 

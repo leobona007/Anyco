@@ -7,60 +7,32 @@ import logoImage from "@/assets/images/logo.png";
 
 // Navigation data
 const navigationItems = [
-  { name: "Início", href: "/", dropdown: false },
+  { name: "Início", href: "#top", dropdown: false },
   { 
-    name: "Páginas", 
-    href: "#", 
-    dropdown: true,
-    items: [
-      { name: "Sobre Nós", href: "/about" },
-      { name: "Nossa Equipe", href: "/team" },
-      { name: "Preços", href: "/pricing" },
-      { name: "Perguntas Frequentes", href: "/faq" }
-    ]
+    name: "Sobre Nós", 
+    href: "#about-us", 
+    dropdown: false
   },
   { 
     name: "Serviços", 
     href: "#", 
     dropdown: true,
     items: [
-      { name: "Marketing Digital", href: "/services/digital-marketing" },
-      { name: "Serviços de SEO", href: "/services/seo" },
-      { name: "Gestão de Conteúdo", href: "/services/content" },
-      { name: "Análise de Dados", href: "/services/data-analysis" }
+      { name: "Desenvolvimento de Paginas", href: "/services/digital-marketing" },
+      { name: "Gerenciamento de Google ADS", href: "/services/seo" },
+      { name: "Gerenciamento do Instagram/Facebook ADS", href: "/services/content" },
     ]
   },
-  { 
-    name: "Estudos de Caso", 
-    href: "#", 
-    dropdown: true,
-    items: [
-      { name: "Estudo de Caso 1", href: "/case-study/1" },
-      { name: "Estudo de Caso 2", href: "/case-study/2" },
-      { name: "Galeria de Estudos", href: "/case-studies" }
-    ]
-  },
-  { 
+   { 
     name: "Blog", 
     href: "#", 
-    dropdown: true,
+    dropdown: false,
     items: [
       { name: "Blog Galeria", href: "/blog" },
       { name: "Blog Artigo", href: "/blog/1" }
     ]
   },
-  { 
-    name: "Loja", 
-    href: "#", 
-    dropdown: true,
-    items: [
-      { name: "Produtos", href: "/shop" },
-      { name: "Detalhes do Produto", href: "/shop/product/1" },
-      { name: "Carrinho", href: "/shop/cart" },
-      { name: "Checkout", href: "/shop/checkout" }
-    ]
-  },
-  { name: "Contato", href: "/contact", dropdown: false }
+    { name: "Contato", href: "/contact", dropdown: false }
 ];
 
 const Header = () => {
@@ -95,9 +67,15 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-1">
             {navigationItems.map((item) => (
               !item.dropdown ? (
-                <Link key={item.name} href={item.href} className="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-secondary">
-                  {item.name}
-                </Link>
+                item.href.startsWith('#') ? (
+                  <a key={item.name} href={item.href} className="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-secondary">
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link key={item.name} href={item.href} className="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-secondary">
+                    {item.name}
+                  </Link>
+                )
               ) : (
                 <div key={item.name} className="relative group">
                   <button className="text-white px-3 py-2 rounded-md text-sm font-medium flex items-center hover:bg-secondary">
@@ -120,11 +98,11 @@ const Header = () => {
 
           {/* CTA and Mobile Menu Button */}
           <div className="flex items-center">
-            <a href="tel:+551123456789" className="hidden lg:flex items-center mr-4 text-white hover:text-primary transition duration-200">
+            <a href="tel:+5551981310168" className="hidden lg:flex items-center mr-4 text-white hover:text-primary transition duration-200">
               <span className="bg-primary/80 rounded-full p-2 mr-2">
                 <Phone className="text-white h-4 w-4" />
               </span>
-              <span>+55 (11) 2345-6789</span>
+              <span>+51 (51) 98131-0168</span>
             </a>
             <button 
               className="lg:hidden text-gray-300 hover:text-white focus:outline-none" 
@@ -146,9 +124,15 @@ const Header = () => {
         <div className="px-2 pt-2 pb-3 space-y-1">
           {navigationItems.map((item) => (
             !item.dropdown ? (
-              <Link key={item.name} href={item.href} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-accent">
-                {item.name}
-              </Link>
+              item.href.startsWith('#') ? (
+                <a key={item.name} href={item.href} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-accent">
+                  {item.name}
+                </a>
+              ) : (
+                <Link key={item.name} href={item.href} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-accent">
+                  {item.name}
+                </Link>
+              )
             ) : (
               <div key={item.name} className="mobile-dropdown">
                 <button 
@@ -175,11 +159,11 @@ const Header = () => {
           ))}
         </div>
         <div className="px-5 pt-4 pb-5 border-t border-border">
-          <a href="tel:+551123456789" className="flex items-center text-white">
+          <a href="tel:+5551981310168" className="flex items-center text-white">
             <span className="bg-primary/80 rounded-full p-2 mr-2">
               <Phone className="text-white h-4 w-4" />
             </span>
-            <span>+55 (11) 2345-6789</span>
+            <span>+55 (51) 98131-0168</span>
           </a>
         </div>
       </motion.div>
