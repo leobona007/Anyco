@@ -71,13 +71,16 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-5 relative"
+            className="lg:col-span-5 relative flex justify-center items-center"
           >
-            <img 
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-              alt="Digital Marketing Team" 
-              className="rounded-lg shadow-2xl w-full relative z-10"
-            />
+            <div className="relative w-full max-w-xl mx-auto overflow-hidden rounded-lg shadow-2xl transform scale-125">
+              <img 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+                alt="Digital Marketing Team" 
+                className="w-full h-auto object-cover relative z-10 aspect-[4/3]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 z-20"></div>
+            </div>
           </motion.div>
         </div>
       </div>
