@@ -46,10 +46,10 @@ const Statistic = ({ label, value, suffix, duration = 2000 }: StatisticProps) =>
 
 const AboutUs = () => {
   const stats = [
-    { label: "Business", value: 29, suffix: "+" },
-    { label: "Peoples", value: 12, suffix: "%" },
-    { label: "Customer Satisfaction", value: 98, suffix: "%" },
-    { label: "Projects", value: 250, suffix: "+" }
+    { label: "Empresas", value: 29, suffix: "+" },
+    { label: "Crescimento", value: 12, suffix: "%" },
+    { label: "Satisfação do Cliente", value: 98, suffix: "%" },
+    { label: "Projetos", value: 250, suffix: "+" }
   ];
   
   return (
@@ -63,17 +63,17 @@ const AboutUs = () => {
             viewport={{ once: true }}
           >
             <span className="px-4 py-1 bg-secondary text-primary rounded-full text-sm font-medium mb-4 inline-block">
-              About Us
+              Sobre Nós
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Your experience is everything to us
+              Sua experiência é tudo para nós
             </h2>
             <p className="text-gray-400 mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              Somos uma agência de marketing digital apaixonada por criar soluções inovadoras. Nossa equipe de especialistas está comprometida em impulsionar seu negócio através de estratégias personalizadas e eficientes.
             </p>
-            <Link href="/about-us">
+            <Link href="/sobre-nos">
               <Button className="gradient-primary text-white font-medium rounded-full px-6 py-6 h-auto">
-                Let's Get Started
+                Vamos Começar
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -107,7 +107,7 @@ const AboutUs = () => {
           >
             <img 
               src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-              alt="About Us" 
+              alt="Sobre Nós" 
               className="rounded-lg w-full shadow-2xl"
             />
             <motion.div 
@@ -119,7 +119,7 @@ const AboutUs = () => {
             >
               <img 
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200&q=80" 
-                alt="Team Collaboration" 
+                alt="Colaboração em Equipe" 
                 className="w-48 h-32 object-cover rounded"
               />
             </motion.div>

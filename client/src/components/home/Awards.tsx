@@ -7,33 +7,33 @@ import { motion, AnimatePresence } from "framer-motion";
 // Award category icons
 const awardCategories = [
   { icon: "/src/assets/icons/brand-icon_1.svg", title: "Web Design" },
-  { icon: "/src/assets/icons/brand-icon_2.svg", title: "UI/UX Design" },
-  { icon: "/src/assets/icons/brand-icon_3.svg", title: "Developer" },
+  { icon: "/src/assets/icons/brand-icon_2.svg", title: "Design UI/UX" },
+  { icon: "/src/assets/icons/brand-icon_3.svg", title: "Desenvolvimento" },
   { icon: "/src/assets/icons/brand-icon_4.svg", title: "ISO Developer" },
-  { icon: "/src/assets/icons/brand-icon_5.svg", title: "Digital Agency" }
+  { icon: "/src/assets/icons/brand-icon_5.svg", title: "Agência Digital" }
 ];
 
 // Award data
 const awards = [
   {
     id: "tab1",
-    title: "CSS Design Awards",
+    title: "Prêmio CSS Design",
     year: "2020",
-    description: "Some people will tell you there are four while others may tell you there are eight thing.",
+    description: "Nossa agência foi premiada pelo uso inovador de CSS e implementação de designs responsivos que melhoram a experiência do usuário.",
     image: "https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "tab2",
-    title: "Good Design Award",
+    title: "Prêmio de Bom Design",
     year: "2021",
-    description: "Some people will tell you there are four while others may tell you there are eight thing.",
+    description: "Recebemos reconhecimento pela excelência em design de interfaces e criação de experiências de usuário intuitivas e acessíveis.",
     image: "https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "tab3",
     title: "Top Design King",
     year: "2022",
-    description: "Some people will tell you there are four while others may tell you there are eight thing.",
+    description: "Fomos coroados como líderes em design digital, destacando-nos pela criatividade e inovação em projetos de marketing digital.",
     image: "https://images.unsplash.com/photo-1604871000636-074fa5117945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
   }
 ];
@@ -70,15 +70,15 @@ const Awards = () => {
           className="text-center mb-12"
         >
           <span className="px-4 py-1 bg-secondary text-primary rounded-full text-sm font-medium mb-4 inline-block">
-            Our Achievement Awards
+            Nossos Prêmios e Conquistas
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Check Our Awards and Achievement
+            Confira Nossos Prêmios e Conquistas
           </h2>
           <div className="flex justify-center mt-6">
-            <Link href="/our-history">
+            <Link href="/nossa-historia">
               <Button className="gradient-primary text-white font-medium rounded-full px-6 py-6 h-auto">
-                Our History
+                Nossa História
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -148,12 +148,34 @@ const Awards = () => {
                         />
                       ))}
                     </div>
+                    
+                    <div className="mt-8">
+                      <a 
+                        href={`/awards/${activeAward.id}`}
+                        className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-full hover:bg-primary/90 transition-all duration-300"
+                      >
+                        Ver Detalhes do Prêmio
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </a>
+                    </div>
                   </motion.div>
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <a href="/awards" className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-white shadow-lg hover:bg-primary/90 transition-all duration-300">
+            Ver Todos os Prêmios
+          </a>
+        </motion.div>
       </div>
     </section>
   );

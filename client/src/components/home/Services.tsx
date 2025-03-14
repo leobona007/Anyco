@@ -68,15 +68,26 @@ const Services = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="service-card bg-background p-8 rounded-lg border border-gray-800"
+              whileHover={{ 
+                scale: 1.03, 
+                boxShadow: "0 10px 30px rgba(0,0,0,0.15)"
+              }}
+              transition={{ duration: 0.3 }}
+              className="service-card bg-background p-8 rounded-lg border border-gray-800 hover:border-primary/30 group cursor-pointer"
             >
-              <div className="mb-6 text-primary w-16 h-16 flex items-center justify-center bg-secondary rounded-lg">
+              <div className="mb-6 text-primary w-16 h-16 flex items-center justify-center bg-secondary rounded-lg group-hover:bg-primary/10 transition-colors duration-300">
                 <img src={service.icon} alt={service.title} className="w-10 h-10" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
-              <p className="text-gray-400">
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
+              <p className="text-gray-400 mb-6">
                 {service.description}
               </p>
+              <a 
+                href={`/services/${index + 1}`} 
+                className="inline-flex items-center text-sm font-medium text-gray-400 hover:text-primary transition-colors duration-300 group-hover:text-primary"
+              >
+                Saiba mais <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
             </motion.div>
           ))}
         </motion.div>
