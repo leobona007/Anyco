@@ -6,37 +6,37 @@ import { Phone, Menu, ChevronDown, ChevronRight } from "lucide-react";
 
 // Navigation data
 const navigationItems = [
-  { name: "Home", href: "/", dropdown: false },
+  { name: "Início", href: "/", dropdown: false },
   { 
-    name: "Pages", 
+    name: "Páginas", 
     href: "#", 
     dropdown: true,
     items: [
-      { name: "About Us", href: "/about" },
-      { name: "Our Team", href: "/team" },
-      { name: "Pricing", href: "/pricing" },
-      { name: "FAQ", href: "/faq" }
+      { name: "Sobre Nós", href: "/about" },
+      { name: "Nossa Equipe", href: "/team" },
+      { name: "Preços", href: "/pricing" },
+      { name: "Perguntas Frequentes", href: "/faq" }
     ]
   },
   { 
-    name: "Services", 
+    name: "Serviços", 
     href: "#", 
     dropdown: true,
     items: [
-      { name: "Digital Marketing", href: "/services/digital-marketing" },
-      { name: "SEO Services", href: "/services/seo" },
-      { name: "Content Management", href: "/services/content" },
-      { name: "Data Analysis", href: "/services/data-analysis" }
+      { name: "Marketing Digital", href: "/services/digital-marketing" },
+      { name: "Serviços de SEO", href: "/services/seo" },
+      { name: "Gestão de Conteúdo", href: "/services/content" },
+      { name: "Análise de Dados", href: "/services/data-analysis" }
     ]
   },
   { 
-    name: "Case Study", 
+    name: "Estudos de Caso", 
     href: "#", 
     dropdown: true,
     items: [
-      { name: "Case Study 1", href: "/case-study/1" },
-      { name: "Case Study 2", href: "/case-study/2" },
-      { name: "Case Study Grid", href: "/case-studies" }
+      { name: "Estudo de Caso 1", href: "/case-study/1" },
+      { name: "Estudo de Caso 2", href: "/case-study/2" },
+      { name: "Galeria de Estudos", href: "/case-studies" }
     ]
   },
   { 
@@ -44,22 +44,22 @@ const navigationItems = [
     href: "#", 
     dropdown: true,
     items: [
-      { name: "Blog Grid", href: "/blog" },
-      { name: "Blog Single", href: "/blog/1" }
+      { name: "Blog Galeria", href: "/blog" },
+      { name: "Blog Artigo", href: "/blog/1" }
     ]
   },
   { 
-    name: "Shop", 
+    name: "Loja", 
     href: "#", 
     dropdown: true,
     items: [
-      { name: "Products", href: "/shop" },
-      { name: "Product Details", href: "/shop/product/1" },
-      { name: "Cart", href: "/shop/cart" },
+      { name: "Produtos", href: "/shop" },
+      { name: "Detalhes do Produto", href: "/shop/product/1" },
+      { name: "Carrinho", href: "/shop/cart" },
       { name: "Checkout", href: "/shop/checkout" }
     ]
   },
-  { name: "Contact", href: "/contact", dropdown: false }
+  { name: "Contato", href: "/contact", dropdown: false }
 ];
 
 const Header = () => {
@@ -128,11 +128,11 @@ const Header = () => {
 
           {/* CTA and Mobile Menu Button */}
           <div className="flex items-center">
-            <a href="tel:+11234567890" className="hidden lg:flex items-center mr-4 text-white hover:text-primary transition duration-200">
+            <a href="tel:+551123456789" className="hidden lg:flex items-center mr-4 text-white hover:text-primary transition duration-200">
               <span className="bg-primary/80 rounded-full p-2 mr-2">
                 <Phone className="text-white h-4 w-4" />
               </span>
-              <span>+1 (123) 456 7890</span>
+              <span>+55 (11) 2345-6789</span>
             </a>
             <button 
               className="lg:hidden text-gray-300 hover:text-white focus:outline-none" 
@@ -183,11 +183,11 @@ const Header = () => {
           ))}
         </div>
         <div className="px-5 pt-4 pb-5 border-t border-border">
-          <a href="tel:+11234567890" className="flex items-center text-white">
+          <a href="tel:+551123456789" className="flex items-center text-white">
             <span className="bg-primary/80 rounded-full p-2 mr-2">
               <Phone className="text-white h-4 w-4" />
             </span>
-            <span>+1 (123) 456 7890</span>
+            <span>+55 (11) 2345-6789</span>
           </a>
         </div>
       </motion.div>

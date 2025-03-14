@@ -1,21 +1,22 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 // Service data
 const services = [
   {
     icon: "/src/assets/icons/marketing_strategy.svg",
-    title: "Digital Marketing Strategies",
-    description: "We specialize in creating custom, responsive websites tailored to your business objectives."
+    title: "Estratégias de Marketing Digital",
+    description: "Especializamos na criação de estratégias personalizadas de marketing digital para atingir seus objetivos de negócio."
   },
   {
     icon: "/src/assets/icons/process_automation.svg",
-    title: "Digital Content Management",
-    description: "We specialize in creating custom, responsive websites tailored to your business objectives."
+    title: "Gestão de Conteúdo Digital",
+    description: "Gerenciamos seu conteúdo digital de forma eficiente e estratégica para maximizar o engajamento e conversões."
   },
   {
     icon: "/src/assets/icons/data_synchronization.svg",
-    title: "Digital Data Synchronization",
-    description: "We specialize in creating custom, responsive websites tailored to your business objectives."
+    title: "Sincronização de Dados Digitais",
+    description: "Integramos seus dados entre múltiplas plataformas para proporcionar uma visão unificada e insights valiosos."
   }
 ];
 
@@ -46,13 +47,13 @@ const Services = () => {
           className="text-center mb-12"
         >
           <span className="px-4 py-1 bg-background text-primary rounded-full text-sm font-medium mb-4 inline-block">
-            Our Services
+            Nossos Serviços
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Our Marketing Services
+            Nossos Serviços de Marketing
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Get the oars in the water and start rowing. Execution is the single biggest factor in achievement, the quicker you will get to the goals!
+            Coloque os remos na água e comece a remar. A execução é o maior fator de sucesso, quanto mais rápido você começar, mais rápido alcançará seus objetivos!
           </p>
         </motion.div>
         
@@ -88,11 +89,14 @@ const Services = () => {
           className="text-center mt-16"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            We Provide brilliant ideas & the digital agency
+            Fornecemos ideias brilhantes & agência digital completa
           </h3>
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-            Imagine reaching deep inside you for all the strength and wisdom that you need to make this decision today.
+            Imagine alcançar toda a força e sabedoria que você precisa para tomar a melhor decisão para seu negócio hoje.
           </p>
+          <a href="/services" className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-white shadow-lg hover:bg-primary/90 transition-all duration-300">
+            Ver Todos os Serviços
+          </a>
         </motion.div>
       </div>
     </section>
