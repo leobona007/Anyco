@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { clientLogos } from "@/lib/constants";
+import tailwindImage from "@/assets/images/tailwind.png";
 
 const ClientLogos = () => {
   // Create two sets of logos for infinite loop effect

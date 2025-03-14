@@ -71,9 +71,6 @@ export const clientLogos = [
     alt: "Chat GPT" 
   },{ 
     src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
-    alt: "Claude-3.7" 
-  },{ 
-    src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
     alt: "Deep Seek" 
   },{ 
     src: "https://assets.website-files.com/6315d6de33cb65389120dc77/63291eb4fa2d27200abdc747_brand-logo-7.svg", 
