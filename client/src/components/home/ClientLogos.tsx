@@ -55,7 +55,7 @@ const ClientLogos = () => {
                   <img 
                     src={logo.src} 
                     alt={logo.alt} 
-                    className="h-12 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition duration-300"
+                    className="h-12 opacity-100 transition duration-300"
                   />
                 </div>
               ))}
