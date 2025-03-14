@@ -19,7 +19,7 @@ const Hero = () => {
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
             >
-              A digital marketing company you can trust
+              Mostramos o seu Negócio para o Mundo.
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-lg text-white/80 mb-8 max-w-2xl"
             >
-              I truly believe Augustine's words are true and if you look at history you know it is true. There are many people in the world dolore magna aliqua.
+              Tenha tempo para focar onde tua empresa precisa de você! E ós cuidamos de mostrar a tua empresa para o mundo! 
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -35,17 +35,11 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex flex-wrap gap-4"
             >
-              <Link href="/about-us">
+              <a href="#about-us">
                 <Button className="bg-white text-background hover:bg-gray-100 font-medium rounded-full px-6 py-6 h-auto">
-                  Let's Get Started
+                  Conheça a AnyCo.
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-              </Link>
-              <a href="tel:+51981310168" className="flex items-center text-white hover:text-gray-200 transition">
-                <span className="bg-white/20 rounded-full p-3 mr-3">
-                  <Phone className="h-5 w-5 text-white" />
-                </span>
-                <span className="font-medium">+51981310168</span>
               </a>
             </motion.div>
             <motion.div 
@@ -54,7 +48,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="mt-10"
             >
-              <p className="text-white/70 mb-2">Follow Us</p>
+              <p className="text-white/70 mb-2">Siga nas Redes</p>
               <div className="flex space-x-4">
                 {socialIcons.map((social, index) => {
                   const IconComponent = social.icon;
