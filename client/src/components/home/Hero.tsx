@@ -6,7 +6,7 @@ import { socialIcons } from "@/lib/constants";
 
 const Hero = () => {
   return (
-    <section className="bg-background py-20 lg:py-32 relative overflow-hidden">
+    <section className="bg-background py-20 lg:pb-8 relative overflow-hidden">
       {/* Green gradient overlay */}
       <div className="absolute inset-0 gradient-hero opacity-70"></div>
       
@@ -71,16 +71,15 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-5 relative flex justify-center items-center"
+            className="lg:col-span-5 relative flex justify-end items-center h-full"
           >
-            <div className="relative w-full max-w-xl mx-auto overflow-hidden rounded-lg shadow-2xl transform scale-125">
+            <div className="relative w-full overflow-hidden rounded-l-lg transform scale-110 h-auto lg:mr-[-50px]">
               <img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+                src="/src/assets/images/mulherv5.png" 
                 alt="Digital Marketing Team" 
-                className="w-full h-auto object-cover relative z-10 aspect-[4/3]"
+                className="w-full h-auto object-contain relative z-10"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 z-20"></div>
-            </div>
+                        </div>
           </motion.div>
         </div>
       </div>
