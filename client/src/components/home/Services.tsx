@@ -86,7 +86,6 @@ const Services = () => {
                 href={`/services/${index + 1}`} 
                 className="inline-flex items-center text-sm font-medium text-gray-400 hover:text-primary transition-colors duration-300 group-hover:text-primary"
               >
-                Saiba mais <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </motion.div>
           ))}
