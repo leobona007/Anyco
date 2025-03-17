@@ -25,7 +25,7 @@ const awards = [
     icons: [{ icon: "/src/assets/icons/brand-icon_1.svg", title: "Web Design" },
     { icon: <BsArrowThroughHeart/>, title: "Design UI/UX" },
     { icon: "/src/assets/icons/brand-icon_3.svg", title: "Desenvolvimento" }]
-  },2
+  },
   {
     id: "tab2",
     title: "2-Visibilidade",
