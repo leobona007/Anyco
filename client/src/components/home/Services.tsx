@@ -5,18 +5,18 @@ import { ArrowRight } from "lucide-react";
 const services = [
   {
     icon: "/src/assets/icons/marketing_strategy.svg",
-    title: "Estratégias de Marketing Digital",
-    description: "Especializamos na criação de estratégias personalizadas de marketing digital para atingir seus objetivos de negócio."
+    title: "Criação de WebPages e WebAPP",
+    description: " Desenvolvemos o espaço ou a ferramenta que seu negocio precisa para estar mais presente no mundo digital!."
   },
   {
     icon: "/src/assets/icons/process_automation.svg",
-    title: "Gestão de Conteúdo Digital",
-    description: "Gerenciamos seu conteúdo digital de forma eficiente e estratégica para maximizar o engajamento e conversões."
+    title: "Trafego Pago",
+    description: "Criamos e gerenciamos suas campanhas dentro do cenário digital de forma eficiente e estratégica para maximizar o engajamento e conversões."
   },
   {
     icon: "/src/assets/icons/data_synchronization.svg",
-    title: "Sincronização de Dados Digitais",
-    description: "Integramos seus dados entre múltiplas plataformas para proporcionar uma visão unificada e insights valiosos."
+    title: "Implementação de Agentes De IA",
+    description: "Não paguem impostos, não pague direitos, não tenha falta, nem vale refeição, agentes de ia o futuro te espera."
   }
 ];
 
@@ -50,10 +50,10 @@ const Services = () => {
             Nossos Serviços
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Nossos Serviços de Marketing
+            Seja visto no Digital
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Coloque os remos na água e comece a remar. A execução é o maior fator de sucesso, quanto mais rápido você começar, mais rápido alcançará seus objetivos!
+           Aqui você encontrará um time preparado para fortalecer o seu negocio! 
           </p>
         </motion.div>
         
@@ -100,14 +100,11 @@ const Services = () => {
           className="text-center mt-16"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Fornecemos ideias brilhantes & agência digital completa
+            Não espere Resultados diferentes fazendo a Mesma coisa!
           </h3>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+          <p className="text-gray-300 max-w-2xl mx-auto mb-0">
             Imagine alcançar toda a força e sabedoria que você precisa para tomar a melhor decisão para seu negócio hoje.
           </p>
-          <a href="/services" className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-white shadow-lg hover:bg-primary/90 transition-all duration-300">
-            Ver Todos os Serviços
-          </a>
         </motion.div>
       </div>
     </section>
