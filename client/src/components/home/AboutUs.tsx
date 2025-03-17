@@ -46,10 +46,10 @@ const Statistic = ({ label, value, suffix, duration = 2000 }: StatisticProps) =>
 
 const AboutUs = () => {
   const stats = [
-    { label: "Empresas", value: 29, suffix: "+" },
-    { label: "Crescimento", value: 12, suffix: "%" },
-    { label: "Satisfação do Cliente", value: 98, suffix: "%" },
-    { label: "Projetos", value: 250, suffix: "+" }
+    { label: "Empresas", value: 16, suffix: "" },
+    { label: "linhas de codigos", value: 100, suffix: "mil" },
+    { label: "xicaras de café tomadas", value: 233, suffix: "e tomando..." },
+    { label: "Projetos Realizados", value: 50, suffix: "" }
   ];
   
   return (
@@ -63,13 +63,13 @@ const AboutUs = () => {
             viewport={{ once: true }}
           >
             <span className="px-4 py-1 bg-secondary text-primary rounded-full text-sm font-medium mb-4 inline-block">
-              Sobre Nós
+              Sobre a Any
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Sua experiência é tudo para nós
+              O Seu Resultado é Tudo para nós!
             </h2>
             <p className="text-gray-400 mb-8">
-              Somos uma agência de marketing digital apaixonada por criar soluções inovadoras. Nossa equipe de especialistas está comprometida em impulsionar seu negócio através de estratégias personalizadas e eficientes.
+              Somos uma agência de marketing digital apaixonada por criar soluções que fazem a diferença pro seu negocio! Contamos com uma equipe que está em constante aprimoramento e pronta para usar todas as ferramentas que o seu negocio precisa para chegar no proximo nivel!  
             </p>
             <Link href="/sobre-nos">
               <Button className="gradient-primary text-white font-medium rounded-full px-6 py-6 h-auto">
