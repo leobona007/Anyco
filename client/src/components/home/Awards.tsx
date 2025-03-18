@@ -24,7 +24,31 @@ const awards = [
       { icon: "/src/assets/icons/brand-icon_3.svg", title: "Desenvolvimento" }
     ]
   },
-  // ... Outras tabs
+  {
+    id: "tab2",
+    title: "2-Visibilidade",
+    description: "Uso de Ferramentas de impulsionamentos para que possamos estar cada vez mais visivel para o seu publico alvo.",
+    image: "https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    , icons: [{ icon: "/src/assets/icons/brand-icon_1.svg", title: "Web Design" },
+    { icon: "/src/assets/icons/brand-icon_2.svg", title: "Design UI/UX" },
+    { icon: "/src/assets/icons/brand-icon_3.svg", title: "Desenvolvimento" }]
+  },
+  {
+    id: "tab3",
+    title: "3-Conversão",
+    description: "Estratégia de funil de vendas com objetivo de maximar conversões desde o primeiro contato com o cliente.",
+    image: "https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",icons: [{ icon: "/src/assets/icons/brand-icon_1.svg", title: "Web Design" },
+      { icon: "/src/assets/icons/brand-icon_2.svg", title: "Design UI/UX" },
+      { icon: "/src/assets/icons/brand-icon_3.svg", title: "Desenvolvimento" }]
+    }, {
+    id: "tab4",
+    title: "4-Resultado",
+    description: "Consequencia das ações inciativas realizadas é o crescimento da sua empresa!",
+    image: "https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",icons: [{ icon: "/src/assets/icons/brand-icon_1.svg", title: "Web Design" },
+      { icon: "/src/assets/icons/brand-icon_2.svg", title: "Design UI/UX" },
+      { icon: "/src/assets/icons/brand-icon_3.svg", title: "Desenvolvimento" }]
+  }
+
 ];
 
 interface AwardCategoryProps {

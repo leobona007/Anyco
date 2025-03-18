@@ -72,7 +72,7 @@ const AboutUs = () => {
               Somos uma agência de marketing digital apaixonada por criar soluções que fazem a diferença pro seu negocio! Contamos com uma equipe que está em constante aprimoramento e pronta para usar todas as ferramentas que o seu negocio precisa para chegar no proximo nivel!  
             </p>
             <Link href="/sobre-nos">
-              <Button className="gradient-primary text-white font-medium rounded-full px-6 py-6 h-auto">
+              <Button className="gradient-primary text-white font-medium rounded-full px-6 py-3 h-auto text-lg">
                 Vamos Começar
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
