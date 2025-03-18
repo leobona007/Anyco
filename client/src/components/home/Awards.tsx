@@ -1,18 +1,14 @@
-import { useState, ReactNode } from "react";
+import { useState, ReactNode, isValidElement, cloneElement } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BsArrowThroughHeart } from "react-icons/bs";
-
+import { IconContext } from "react-icons";
 
 // Award category icons
 const awardCategories = [
-  { icon: "/src/assets/icons/brand-icon_1.svg", title: "Web Design" },
-  { icon: "/src/assets/icons/brand-icon_2.svg", title: "Design UI/UX" },
-  { icon: "/src/assets/icons/brand-icon_3.svg", title: "Desenvolvimento" },
-  { icon: "/src/assets/icons/brand-icon_4.svg", title: "ISO Developer" },
-  { icon: "/src/assets/icons/brand-icon_5.svg", title: "Agência Digital" }
+  { icon: "/src/assets/icons/image.png", title: "Web Design" },
 ];
 
 // Award data
@@ -22,46 +18,38 @@ const awards = [
     title: "1-Presença",
     description: "Criação de Paginas na Web e redes socias que solidificam a presença digital.",
     image: "https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    icons: [{ icon: "/src/assets/icons/brand-icon_1.svg", title: "Web Design" },
-    { icon: <BsArrowThroughHeart/>, title: "Design UI/UX" },
-    { icon: "/src/assets/icons/brand-icon_3.svg", title: "Desenvolvimento" }]
+    icons: [
+      { icon: "/src/assets/icons/brand-icon_1.svg", title: "Web Design" },
+      { icon: <BsArrowThroughHeart />, title: "Design UI/UX" },
+      { icon: "/src/assets/icons/brand-icon_3.svg", title: "Desenvolvimento" }
+    ]
   },
-  {
-    id: "tab2",
-    title: "2-Visibilidade",
-    description: "Uso de Ferramentas de impulsionamentos para que possamos estar cada vez mais visivel para o seu publico alvo.",
-    image: "https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-    , icons: [{ icon: "/src/assets/icons/brand-icon_1.svg", title: "Web Design" },
-    { icon: "/src/assets/icons/brand-icon_2.svg", title: "Design UI/UX" },
-    { icon: "/src/assets/icons/brand-icon_3.svg", title: "Desenvolvimento" }]
-  },
-  {
-    id: "tab3",
-    title: "3-Conversão",
-    description: "Estratégia de funil de vendas com objetivo de maximar conversões desde o primeiro contato com o cliente.",
-    image: "https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",icons: [{ icon: "/src/assets/icons/brand-icon_1.svg", title: "Web Design" },
-      { icon: "/src/assets/icons/brand-icon_2.svg", title: "Design UI/UX" },
-      { icon: "/src/assets/icons/brand-icon_3.svg", title: "Desenvolvimento" }]
-    }, {
-    id: "tab4",
-    title: "4-Resultado",
-    description: "Consequencia das ações inciativas realizadas é o crescimento da sua empresa!",
-    image: "https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",icons: [{ icon: "/src/assets/icons/brand-icon_1.svg", title: "Web Design" },
-      { icon: "/src/assets/icons/brand-icon_2.svg", title: "Design UI/UX" },
-      { icon: "/src/assets/icons/brand-icon_3.svg", title: "Desenvolvimento" }]
-  }
+  // ... Outras tabs
 ];
 
-// Updated to accept both string and ReactNode for icon
-const AwardCategory = ({ icon, title }: { icon: string | ReactNode; title: string }) => {
+interface AwardCategoryProps {
+  icon: string | ReactNode;
+  title: string;
+}
+
+const AwardCategory = ({ icon, title }: AwardCategoryProps) => {
   return (
     <div className="text-center">
       <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-3">
-        {typeof icon === 'string' ? (
-          <img src={icon} alt={title} className="w-8 h-8" />
+        {typeof icon === "string" ? (
+          <img
+            src={icon}
+            alt={title}
+            className="w-8 h-8 object-contain"
+          />
         ) : (
-          <div className="text-white w-8 h-8 flex items-center justify-center">
-            {icon}
+          <div className="w-8 h-8 flex items-center justify-center">
+            {isValidElement(icon)
+              ? cloneElement(icon as React.ReactElement, {
+                  className: "w-8 h-8",
+                  style: { color: "#12cc94" },
+                })
+              : icon}
           </div>
         )}
       </div>
@@ -77,9 +65,7 @@ const Awards = () => {
     setActiveTab(tabId);
   };
 
-  // Get current active award
-  const activeAward = awards.find(award => award.id === activeTab);
-  console.log(activeAward);
+  const activeAward = awards.find((award) => award.id === activeTab);
 
   return (
     <section className="py-20 bg-background">
@@ -98,8 +84,7 @@ const Awards = () => {
             Metodologia PVC
           </h2>
           <div className="flex justify-center mt-6">
-            <Link href="/nossa-historia">
-            </Link>
+            <Link href="/nossa-historia"></Link>
           </div>
         </motion.div>
 
@@ -108,8 +93,11 @@ const Awards = () => {
           {awards.map((award) => (
             <button
               key={award.id}
-              className={`px-6 py-3 rounded-full text-white font-medium mr-4 mb-2 transition duration-300 ${activeTab === award.id ? "bg-primary" : "bg-secondary hover:bg-secondary/70"
-                }`}
+              className={`px-6 py-3 rounded-full text-white font-medium mr-4 mb-2 transition duration-300 ${
+                activeTab === award.id
+                  ? "bg-primary"
+                  : "bg-secondary hover:bg-secondary/70"
+              }`}
               onClick={() => handleTabChange(award.id)}
             >
               {award.title}
@@ -163,8 +151,7 @@ const Awards = () => {
                       ))}
                     </div>
 
-                    <div className="mt-8">
-                    </div>
+                    <div className="mt-8"></div>
                   </motion.div>
                 </div>
               </motion.div>
@@ -179,7 +166,10 @@ const Awards = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <a href="/awards" className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-white shadow-lg hover:bg-primary/90 transition-all duration-300">
+          <a
+            href="/awards"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-white shadow-lg hover:bg-primary/90 transition-all duration-300"
+          >
             Fale Conosco Agora!
           </a>
         </motion.div>

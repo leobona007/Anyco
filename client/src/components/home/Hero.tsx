@@ -36,7 +36,7 @@ const Hero = () => {
               className="flex flex-wrap gap-4"
             >
               <a href="#about-us">
-                <Button className="bg-white text-background hover:bg-gray-100 font-medium rounded-full px-6 py-6 h-auto">
+                <Button className="bg-white text-background hover:bg-gray-300 font-big rounded-full px-6 py-3 h-auto text-lg">
                   Conheça a AnyCo.
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
