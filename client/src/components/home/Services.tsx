@@ -1,22 +1,25 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+// Importa os ícones diretamente dos arquivos na pasta assets
+import marketingStrategyIcon from "@/assets/icons/marketing_strategy.svg";
+import processAutomationIcon from "@/assets/icons/process_automation.svg";
+import dataSynchronizationIcon from "@/assets/icons/data_synchronization.svg";
 
-// Service data
 const services = [
   {
-    icon: "/src/assets/icons/marketing_strategy.svg",
+    icon: marketingStrategyIcon,
     title: "Criação de WebPages e WebAPP",
-    description: " Desenvolvemos o espaço ou a ferramenta que seu negocio precisa para estar mais presente no mundo digital!."
+    description: "Desenvolvemos o espaço ou a ferramenta que seu negócio precisa para estar mais presente no mundo digital!."
   },
   {
-    icon: "/src/assets/icons/process_automation.svg",
-    title: "Trafego Pago",
+    icon: processAutomationIcon,
+    title: "Tráfego Pago",
     description: "Criamos e gerenciamos suas campanhas dentro do cenário digital de forma eficiente e estratégica para maximizar o engajamento e conversões."
   },
   {
-    icon: "/src/assets/icons/data_synchronization.svg",
+    icon: dataSynchronizationIcon,
     title: "Implementação de Agentes De IA",
-    description: "Não paguem impostos, não pague direitos, não tenha falta, nem vale refeição, agentes de ia o futuro te espera."
+    description: "Não paguem impostos, não pague direitos, não tenha falta, nem vale refeição, agentes de IA o futuro te espera."
   }
 ];
 
@@ -25,17 +28,15 @@ const Services = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
+      transition: { staggerChildren: 0.2 }
     }
   };
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
-  
+
   return (
     <section className="py-20 bg-secondary">
       <div className="container mx-auto max-w-7xl px-4">
@@ -53,7 +54,7 @@ const Services = () => {
             Seja visto no Digital
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-           Aqui você encontrará um time preparado para fortalecer o seu negocio! 
+            Aqui você encontrará um time preparado para fortalecer o seu negócio!
           </p>
         </motion.div>
         
@@ -78,7 +79,9 @@ const Services = () => {
               <div className="mb-6 text-primary w-16 h-16 flex items-center justify-center bg-secondary rounded-lg group-hover:bg-primary/10 transition-colors duration-300">
                 <img src={service.icon} alt={service.title} className="w-10 h-10" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">
+                {service.title}
+              </h3>
               <p className="text-gray-400 mb-6">
                 {service.description}
               </p>
@@ -86,6 +89,7 @@ const Services = () => {
                 href={`/services/${index + 1}`} 
                 className="inline-flex items-center text-sm font-medium text-gray-400 hover:text-primary transition-colors duration-300 group-hover:text-primary"
               >
+                {/* Pode adicionar um ícone ou texto aqui */}
               </a>
             </motion.div>
           ))}

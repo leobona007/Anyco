@@ -1,0 +1,18 @@
+<head>
+    <title>$michiBook - Discover and Share Michi Moments</title>
+    <meta name="description" content="On MichiBook you can explore the infinity meme cat $michi - a collection of Michi's memes images. Upload, share, and discover michi moments.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://anyco.com.br/">
+    <link rel="icon" href="https://anyco.com.br/favicon.png" type="image/png">
+    <link rel="mask-icon" href="https://anyco.com.br/favicon.png" type="image/png">
+    <meta property="og:title" content="$michi Book - Discover and Share Michi Memes">
+    <meta property="og:description" content="On MichiBook you can explore the infinity meme cat $michi - a collection of Michi's memes images. Upload, share, and discover michi moments.">
+    <meta property="og:image" content="https://anyco.com.br/thumbmichibook.png">
+    <meta property="og:url" content="https://anyco.com.br/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="$michi Book - Discover and Share Michi Memes">
+    <meta name="twitter:description" content="Explore the infinity meme $michi - a collection of Michi's images. Upload, share, and discover michi moments.">
+    <meta name="twitter:image" content="https://anyco.com.br/thumbmichibook.png">
+    <link rel="apple-touch-icon" href="./favicon.png">
+</head>
