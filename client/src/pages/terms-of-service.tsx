@@ -9,7 +9,7 @@ export default function TermsOfService() {
           <p className="text-sm text-gray-600 mb-2">Data de Vigência: [Data]</p>
           <p className="mb-4">
             Bem-vindo ao Anyco! Estes Termos de Serviço regem o uso do nosso aplicativo. Ao utilizar nossos serviços, você concorda com estes termos:
-          </p>
+          </p> 
           <h2 className="text-xl font-semibold mb-2">1. Aceitação dos Termos:</h2>
           <p className="mb-4">
             Ao acessar ou usar o aplicativo, você concorda em cumprir estes Termos de Serviço.

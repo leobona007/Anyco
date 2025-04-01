@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
             Este documento descreve como o Anyco coleta, usa, armazena e protege as informações fornecidas pelos usuários. Ao acessar e utilizar nosso aplicativo, você concorda com as práticas descritas abaixo.
           </p>
           <h2 className="text-xl font-semibold mb-2">Informações Coletadas:</h2>
-          <p className="mb-4">
+          <p className="mb-4"> 
             Coletamos dados pessoais fornecidos voluntariamente (como nome, e-mail e informações necessárias para o uso do aplicativo), além de informações geradas automaticamente (dados de uso, logs, etc.).
           </p>
           <h2 className="text-xl font-semibold mb-2">Uso das Informações:</h2>
