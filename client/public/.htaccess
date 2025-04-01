@@ -1,0 +1,10 @@
+# Desativa listagem de diretórios
+Options -Indexes
+
+# Ativa o mecanismo de reescrita
+RewriteEngine On
+
+# Redireciona todas as requisições para index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
